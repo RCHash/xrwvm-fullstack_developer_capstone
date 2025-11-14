@@ -82,9 +82,9 @@ def initiate():
             "car_make": car_make_instances[3]
         },
         {
-            "name": "Carnival", 
-            "type": "SUV", 
-            "year": 2023, 
+            "name": "Carnival",
+            "type": "SUV",
+            "year": 2023,
             "car_make": car_make_instances[3]
         },
         {
