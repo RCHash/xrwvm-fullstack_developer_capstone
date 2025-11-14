@@ -42,7 +42,7 @@ origin2a = 'https://cavanha-8000.theianext-0-labs-prod-misc-tools'
 origin2b = '-us-east-0.proxy.cognitiveclass.ai'
 CSRF_TRUSTED_ORIGINS = [
     origin2a + origin2b,
-    origin1a + origin1b, 
+    origin1a + origin1b,
     ]
 
 REST_FRAMEWORK = {
@@ -105,11 +105,12 @@ DATABASES = {
     }
 }
 
-name_var1='django.contrib.auth.password_validation.UserAttributeSimilarityValidator'
+name_var1a = 'django.contrib.auth.password_validation'
+name_var1b = '.UserAttributeSimilarityValidator'
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME':
-        name_var1,
+        name_var1a + name_var1b,
     },
     {
         'NAME':
