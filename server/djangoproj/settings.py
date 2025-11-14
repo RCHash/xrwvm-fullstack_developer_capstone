@@ -27,14 +27,14 @@ SECRET_KEY =\
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-host1 = 'https://cavanha-8000.theianext-0-labs-prod-misc-tools' +
-'-us-east-0.proxy.cognitiveclass.ai'
-host2 = 'https://cavanha-8000.theiadockernext-1-labs-prod-theiak8s' +
-'-4-tor01.proxy.cognitiveclass.ai'
+host1a = 'https://cavanha-8000.theianext-0-labs-prod-misc-tools'
+host1b = '-us-east-0.proxy.cognitiveclass.ai'
+host2a = 'https://cavanha-8000.theiadockernext-1-labs-prod-theiak8s'
+host2b = '-4-tor01.proxy.cognitiveclass.ai'
 ALLOWED_HOSTS = [
     'localhost',
-    host1,
-    host2,
+    host1a + host1b,
+    host2a + host2b,
     ]
 origin1 = 'https://cavanha-8000.theiadockernext-1-labs-prod-theiak8s' +
 '-4-tor01.proxy.cognitiveclass.ai'
