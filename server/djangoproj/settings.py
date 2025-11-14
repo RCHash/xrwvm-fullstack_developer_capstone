@@ -36,13 +36,13 @@ ALLOWED_HOSTS = [
     host1a + host1b,
     host2a + host2b,
     ]
-origin1 = 'https://cavanha-8000.theiadockernext-1-labs-prod-theiak8s' +
-'-4-tor01.proxy.cognitiveclass.ai'
-origin2 = 'https://cavanha-8000.theianext-0-labs-prod-misc-tools' +
-'-us-east-0.proxy.cognitiveclass.ai'
+origin1a = 'https://cavanha-8000.theiadockernext-1-labs-prod-theiak8s'
+origin1b = '-4-tor01.proxy.cognitiveclass.ai'
+origin2a = 'https://cavanha-8000.theianext-0-labs-prod-misc-tools'
+origin2b = '-us-east-0.proxy.cognitiveclass.ai'
 CSRF_TRUSTED_ORIGINS = [
-    origin2,
-    origin1, 
+    origin2a + origin2b,
+    origin1a + origin1b, 
     ]
 
 REST_FRAMEWORK = {
