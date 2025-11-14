@@ -27,15 +27,22 @@ SECRET_KEY =\
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS=[
+host1 = 'https://cavanha-8000.theianext-0-labs-prod-misc-tools' +
+'-us-east-0.proxy.cognitiveclass.ai'
+host2 = 'https://cavanha-8000.theiadockernext-1-labs-prod-theiak8s' +
+'-4-tor01.proxy.cognitiveclass.ai'
+ALLOWED_HOSTS = [
     'localhost',
-    'https://cavanha-8000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai',
-    'https://cavanha-8000.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai',
+    host1,
+    host2,
     ]
-CSRF_TRUSTED_ORIGINS=[
-    'https://cavanha-8000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai',
-    'https://cavanha-8000.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai',
+origin1 = 'https://cavanha-8000.theiadockernext-1-labs-prod-theiak8s' +
+'-4-tor01.proxy.cognitiveclass.ai'
+origin2 = 'https://cavanha-8000.theianext-0-labs-prod-misc-tools' +
+'-us-east-0.proxy.cognitiveclass.ai'
+CSRF_TRUSTED_ORIGINS = [
+    origin2,
+    origin1, 
     ]
 
 REST_FRAMEWORK = {
@@ -98,10 +105,11 @@ DATABASES = {
     }
 }
 
+name_var1='django.contrib.auth.password_validation.UserAttributeSimilarityValidator'
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME':
-        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        name_var1,
     },
     {
         'NAME':
